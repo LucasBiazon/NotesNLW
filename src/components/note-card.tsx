@@ -10,6 +10,9 @@ interface NoteCardPros {
   } 
 }
 
+
+
+
 export function NoteCard({note}: NoteCardPros){
   return (
     <Dialog.Root>
@@ -22,7 +25,7 @@ export function NoteCard({note}: NoteCardPros){
           </p>
           <div className='absolute bottom-0 right-0 left-0 h-1/2 pointer-events-none bg-gradient-to-t from-black/60 to-black/0'></div>
       </Dialog.Trigger>
-
+   
       <Dialog.Portal>
         <Dialog.Overlay className='inset-0 fixed bg-black/60'/>
         <Dialog.Content className='z-10  overflow-hidden fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[360px] sm:max-w-2xl w-full h-[60vh] outline-none rounded-lg bg-slate-700 flex flex-col'>
@@ -31,7 +34,7 @@ export function NoteCard({note}: NoteCardPros){
           </Dialog.Close>
          <div className='flex flex-1 flex-col p-5'>
             <span className='text-small text-slate-300'>
-              {note.date.toISOString()}
+              {formatDistanceToNow(note.date, {locale:ptBR, addSuffix: true})}  
             </span>
             <p className='text-small text-slate-400 leading-6 break-words'>
               {note.content}
