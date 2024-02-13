@@ -14,6 +14,7 @@ export function NewNoteCard({onNoteCreated}: NewNoteCardProps){
   const [shouldShowOnBoaring, setShouldShowOnBoaring] = useState(true);
   const [content, setContent] = useState('')
 
+
   function handleStartEditor(){
     setShouldShowOnBoaring(false);
   }
@@ -32,7 +33,7 @@ export function NewNoteCard({onNoteCreated}: NewNoteCardProps){
       setShouldShowOnBoaring(true)
       toast.success("Nota criada com sucesso")
   }
-  
+
   return (
     <Dialog.Root>
       <Dialog.Trigger className='roundend-md bg-slate-700 p-5 flex flex-col text-left gap-3'>
