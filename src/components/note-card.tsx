@@ -28,7 +28,7 @@ export function NoteCard({note}: NoteCardPros){
    
       <Dialog.Portal>
         <Dialog.Overlay className='inset-0 fixed bg-black/60'/>
-        <Dialog.Content className='z-10  overflow-hidden fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[360px] sm:max-w-2xl w-full h-[60vh] outline-none rounded-lg bg-slate-700 flex flex-col'>
+        <Dialog.Content className='z-10  overflow-hidden inset-0  fixed md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2  md:max-w-2xl w-full md:h-[60vh] outline-none md:rounded-lg bg-slate-700 flex flex-col'>
           <Dialog.Close className='absolute right-0 top-0 bg-slate-800 p-1.5 text-slate-400 hover:text-slate-200'>
             <X className='inset-5'></X>
           </Dialog.Close>
